@@ -1,0 +1,31 @@
+<div>
+    <h1>Deleting Employee</h1>
+    <h2>Would you like to continue?</h2>
+    <p-card [style]="{'width': '80', 'margin-bottom': '0em'}">
+        <p-divider></p-divider>
+        <ng-template pTemplate="header">
+        </ng-template>
+        <div class="row">
+            <div class="col-1">
+                <b><label>Employee Name</label></b> <br>
+                <b><label>Designation</label></b> <br>
+                <b><label>Address</label></b> <br>
+                <b><label>Employee Salary</label></b> <br>
+                <b><label>Joining Date</label></b> <br>
+            </div>
+            <div class="col-1">
+                <label>: &nbsp;&nbsp; {{employee.name}}</label> <br>
+                <label>: &nbsp;&nbsp; {{employee.designation}}</label> <br>
+                <label>: &nbsp;&nbsp; {{employee.address}}</label> <br>
+                <label>: &nbsp;&nbsp; {{employee.salary}}</label> <br>
+                <label>: &nbsp;&nbsp; {{employee.joiningDate | date : "dd/MM/yyy"}}</label> <br>
+            </div>
+                
+        </div>
+        <br><br><br><br><br>
+        <div style="padding-top: 25px;">
+            <button pButton pRipple (click)="deleteEmployee()" type="button" label="Yes" class="p-button-info"></button>
+            <button routerLink='' pButton pRipple type="button" label="Back" class="p-button-raised p-button-danger" [style]="{'margin-left': '1%'}"></button>
+        </div>
+    </p-card>
+</div>

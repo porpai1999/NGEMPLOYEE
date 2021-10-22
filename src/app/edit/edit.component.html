@@ -1,0 +1,27 @@
+<div>
+    <p-card [style]="{'width': '80', 'margin-bottom': '2em'}">
+        <h1>Edit Employee</h1>
+        <p-divider></p-divider>
+        <ng-template pTemplate="header">
+        </ng-template>
+        <div>
+            Employee Name <br>
+            <input type="text" pInputText [placeholder]="employee.name" [(ngModel)]="name"> <br>
+            <small class="p-error">The Employee Name field is required.</small> <br><br>
+            Designation <br>
+            <input type="text" pInputText [placeholder]="employee.designation" [(ngModel)]="designation"> <br>
+            Address <br>
+            <input type="text" pInputText [placeholder]="employee.address" [(ngModel)]="address"> <br>
+            Employee Salary <br>
+            <input type="text" pInputText [placeholder]="employee.salary" [(ngModel)]="salary"> <br>
+            <small class="p-error">The Employee Salary field is required</small> <br><br>
+            Joining Date <br>
+            <p-calendar [(ngModel)]="joiningdate" dateFormat="dd/mm/yy" [placeholder]="dateplaceholder" [(ngModel)]="joiningdate"></p-calendar> <br>
+            <small class="p-error">The Joining Date field is required.</small> <br><br>
+        </div>
+        <div style="padding-top: 25px;">
+            <button (click)="updateEmployee()" pButton pRipple type="button" label="Save" class="p-button-info"></button>
+            <button (click)="Back()" pButton pRipple type="button" label="Back" class="p-button-raised p-button-danger" [style]="{'margin-left': '1%'}"></button>
+        </div>
+    </p-card>
+</div>

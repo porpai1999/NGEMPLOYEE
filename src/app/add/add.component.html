@@ -1,0 +1,27 @@
+<div>
+    <p-card [style]="{'width': '80'}">
+        <h1>Create Employee</h1>
+        <p-divider></p-divider>
+        <ng-template pTemplate="header">
+        </ng-template>
+        <div>
+            Employee Name <br>
+            <input type="text" pInputText [(ngModel)]="name"> <br>
+            <small class="p-error">The Employee Name field is required.</small> <br><br>
+            Designation <br>
+            <input type="text" pInputText [(ngModel)]="designation"> <br><br>
+            Address <br>
+            <input type="text" pInputText [(ngModel)]="address"> <br><br>
+            Employee Salary <br>
+            <input type="text" pInputText [(ngModel)]="salary"> <br>
+            <small class="p-error">The Employee Salary field is required</small> <br><br>
+            Joining Date <br>
+            <p-calendar [(ngModel)]="joiningdate" dateFormat="dd/mm/yy"></p-calendar> <br>
+            <small class="p-error">The Joining Date field is required.</small> <br><br>
+        </div>
+        <div style="padding-top: 25px;">
+            <button pButton pRipple type="button" (click)="addEmployee()" label="Save" class="p-button-info"></button>
+            <button routerLink='' pButton pRipple type="button" label="Back" class="p-button-raised p-button-danger" [style]="{'margin-left': '1%'}"></button>
+        </div>
+    </p-card>
+</div>
